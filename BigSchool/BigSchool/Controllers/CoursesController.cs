@@ -30,6 +30,7 @@ namespace BigSchool.Controllers
 
         [Authorize]
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Create(CourseViewModel view)
         {
             if (!ModelState.IsValid)
